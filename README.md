@@ -25,10 +25,10 @@ The entire analysis pipeline can be executed by running the master script.
 2.  Click the "Source" button in the top-right corner of the script editor or Command + Shift + Enter.
 
 # Description of Scripts
-1. Master.R: The main controller script. It sources the other scripts in the correct sequence to ensure a reproducible workflow.
-2. CodeSPAML.R: Reads the raw data from en_SPAML.csv and en_words.csv, performs initial filtering and cleaning, and prepares the data for the next steps.
-3. API.R: Makes calls to the OpenAI API to generate cosine similarity and prompt-based similarity scores for each word pair. It handles the two prompt types (association-based and feature-based) and runs each twice for reliability.
-4. AssociationCorrelation.R: Validates the reliability of the LLM-derived scores by calculating the Pearson correlation between the cosine similarity and prompt-based similarity for only association-based scores.
-5. FeatureasedCorrelation.R: Validates the reliability of the LLM-derived scores by calculating the Pearson correlation between the cosine similarity and prompt-based similarity for only feature-based scores.
-6. Priming.R: Averages the results from the repeated API runs and calculates the final six predictor variables.
-7. MRA.R: Performs the final statistical analyses: scatter plots, histograms, the main multiple regression model with six predictors, and the two separate regression models for the multicollinearity analysis.
+1. `Master.R`: The main controller script. It sources the other scripts in the correct sequence to ensure a reproducible workflow.
+2. `CodeSPAML.R`: Reads the raw data from en_SPAML.csv and en_words.csv, performs initial filtering and cleaning, and prepares the data for the next steps.
+3. `API.R`: Makes calls to the OpenAI API to generate cosine similarity and prompt-based similarity scores for each word pair. It handles the two prompt types (association-based and feature-based) and runs each twice for reliability.
+4. `AssociationCorrelation.R`: Validates the reliability of the LLM-derived scores by calculating the Pearson correlation between the cosine similarity and prompt-based similarity for only association-based scores.
+5. `FeatureasedCorrelation.R`: Validates the reliability of the LLM-derived scores by calculating the Pearson correlation between the cosine similarity and prompt-based similarity for only feature-based scores.
+6. `Priming.R`: Averages the results from the repeated API runs and calculates the final six predictor variables.
+7. `MRA.R`: Performs the final statistical analyses: scatter plots, histograms, the main multiple regression model with six predictors, and the two separate regression models for the multicollinearity analysis.
