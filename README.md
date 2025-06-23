@@ -14,7 +14,6 @@ install.packages(c("openai", "dplyr", "tidyr", "glue"))
 
 # Set up the OpenAI API Key:
 The script `scripts/API.R` requires your OpenAI API key. Open this file and replace the placeholder with your actual key:
-    # In scripts/API.R
     Sys.setenv(
       OPENAI_API_KEY = 'YOUR_API_KEY_HERE' 
     )
